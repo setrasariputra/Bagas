@@ -1,3 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
-    background-color: red;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom right, #5e35b0, #369ed9);
+    min-height: 100vh;
+}
+.board-outter {
+    width: 90%;
+    margin: auto;
+    padding: 40px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 50px 20px rgba(0, 0, 0, 0.2);
+}
+.board-inner {
+
+}
+.bg-yellow {
+    background-color: #e7dc82;
 }
