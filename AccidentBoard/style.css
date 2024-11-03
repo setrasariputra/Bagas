@@ -72,8 +72,17 @@ body {
 .bg-green {
     background: linear-gradient(to bottom, #35cd95, #11a072);
 }
+.bg-red {
+    background-color: #c72f39;
+}
+.bg-white {
+    background-color: white;
+}
 .color-red {
     color: #c72f39;
+}
+.color-white {
+    color: white;
 }
 .radius-5 {
     border-radius: 5px;
