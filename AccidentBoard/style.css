@@ -44,7 +44,7 @@ body {
     background-color: #29323f;
 }
 .bg-green {
-    background-color: green;
+    background: linear-gradient(to bottom, #35cd95, #11a072);
 }
 .radius-5 {
     border-radius: 5px;
