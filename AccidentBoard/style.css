@@ -37,6 +37,16 @@ body {
 .title h1 {
     font-size: 40px;
     color: white; 
+    line-height: 1;
+}
+.datetime-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+.box-info {
+    
 }
 /* Background */
 .bg-yellow {
@@ -57,5 +67,8 @@ body {
 @media only screen and (max-width: 1024px) {
     .header-container {
         display: block;
+    }
+    .title h1 {
+        font-size: 35px;
     }
 }
