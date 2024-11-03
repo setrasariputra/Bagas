@@ -19,11 +19,32 @@ body {
 .board-inner {
     padding: 20px;
 }
+.header-container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    align-items: center;
+}
+.brand-logo {
+    
+}
+.brand-logo img {
+    width: 300px;
+}
+.title {
+    text-align: center;
+}
+.title h1 {
+    font-size: 40px;
+    color: white; 
+}
 .bg-yellow {
     background-color: #e7dc82;
 }
 .bg-black {
     background-color: #29323f;
+}
+.bg-green {
+    background-color: green;
 }
 .radius-5 {
     border-radius: 5px;
