@@ -17,8 +17,14 @@ body {
     box-shadow: 10px 10px 50px 20px rgba(0, 0, 0, 0.2);
 }
 .board-inner {
-
+    padding: 20px;
 }
 .bg-yellow {
     background-color: #e7dc82;
+}
+.bg-black {
+    background-color: #29323f;
+}
+.radius-5 {
+    border-radius: 5px;
 }
