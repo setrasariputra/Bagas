@@ -23,9 +23,10 @@ body {
     display: grid;
     grid-template-columns: 1fr 4fr;
     align-items: center;
+    padding: 20px;
 }
 .brand-logo {
-    
+    text-align: center;
 }
 .brand-logo img {
     width: 300px;
@@ -37,6 +38,7 @@ body {
     font-size: 40px;
     color: white; 
 }
+/* Background */
 .bg-yellow {
     background-color: #e7dc82;
 }
@@ -48,4 +50,12 @@ body {
 }
 .radius-5 {
     border-radius: 5px;
+}
+
+
+/* Responsive Design */
+@media only screen and (max-width: 1024px) {
+    .header-container {
+        display: block;
+    }
 }
