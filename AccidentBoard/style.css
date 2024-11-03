@@ -97,4 +97,15 @@ body {
     .title h1 {
         font-size: 35px;
     }
+    .box-info h2 {
+        font-size: 25px;
+    }
+}
+@media only screen and (max-width: 850px) {
+    .datetime-container {
+        grid-template-columns: 1fr 1fr;
+    }
+    .title h1 {
+        font-size: 30px;
+    }
 }
