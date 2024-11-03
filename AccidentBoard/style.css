@@ -18,6 +18,7 @@ body {
 }
 .board-inner {
     padding: 20px;
+    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.5);
 }
 .header-container {
     display: grid;
@@ -46,9 +47,10 @@ body {
     margin-top: 20px;
 }
 .box-info {
-    
+    padding: 20px;
+    text-align: center;
 }
-/* Background */
+/* Background and Color text */
 .bg-yellow {
     background-color: #e7dc82;
 }
@@ -57,6 +59,9 @@ body {
 }
 .bg-green {
     background: linear-gradient(to bottom, #35cd95, #11a072);
+}
+.color-red {
+    color: #c72f39;
 }
 .radius-5 {
     border-radius: 5px;
