@@ -20,6 +20,14 @@ class SafetyPerformanceBoard {
     addAccidentRecord() {
         
     }
+
+    getAccidentToday() {
+
+    }
+
+    getAccidentThisWeek() {
+        
+    }
 }
 
 
