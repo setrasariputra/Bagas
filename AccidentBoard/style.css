@@ -95,6 +95,15 @@ button:hover {
 button:active {
     background: linear-gradient(to bottom, #17b482, #3fe0a5);
 }
+button.btn-danger {
+    background: linear-gradient(to bottom, #FF4136, #CC332B);
+}
+button.btn-danger:hover {
+    background: linear-gradient(to bottom, #fb4d43, #e24037);
+}
+button.btn-danger:active {
+    background: linear-gradient(to bottom, #e24037, #fb4d43);
+}
 
 .box-info {
     padding: 20px;
