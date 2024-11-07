@@ -104,6 +104,15 @@ button.btn-danger:hover {
 button.btn-danger:active {
     background: linear-gradient(to bottom, #e24037, #fb4d43);
 }
+button.btn-biru {
+    background: linear-gradient(to bottom, #3000F2, #10162F);
+}
+button.btn-biru:hover {
+    background: linear-gradient(to bottom, #5e35b0, #369ed9);
+}
+button.btn-biru:active {
+    background: linear-gradient(to bottom, #369ed9, #5e35b0);
+}
 
 .box-info {
     padding: 20px;

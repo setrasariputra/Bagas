@@ -14,7 +14,7 @@ class SafetyPerformanceBoard {
     updateDateTime() {
         const now = new Date();
         document.getElementById("currentDate").innerHTML = now.toLocaleDateString();
-        document.getElementById("currentTime").innerHTML = now.toLocaleTimeString();
+        document.getElementById("currentTime").innerHTML = now.toLocaleTimeString().replace(/\./g, ":");
     }
 
     addAccidentRecord() {
