@@ -5,6 +5,7 @@ class SafetyPerformanceBoard {
 
     run() {
         this.liveDateTime();
+        this.addAccidentRecord();
     }
 
     liveDateTime() {
@@ -18,7 +19,11 @@ class SafetyPerformanceBoard {
     }
 
     addAccidentRecord() {
-        
+        document.getElementById("accidentForm").addEventListener("submit", (e) => {
+            e.preventDefault();
+            
+            alert("tes submit");
+        });
     }
 
     getAccidentToday() {
