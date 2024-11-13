@@ -21,8 +21,14 @@ class SafetyPerformanceBoard {
     addAccidentRecord() {
         document.getElementById("accidentForm").addEventListener("submit", (e) => {
             e.preventDefault();
+        
+            // get input value from user form
+            const accidentDate = document.getElementById("accidentDate").value;
+            const accidentCount = parseInt(document.getElementById("accidentCount").value);
             
-            alert("tes submit");
+            if(accidentDate && accidentCount > 0) {
+                console.log("proses simpan data")
+            }
         });
     }
 
