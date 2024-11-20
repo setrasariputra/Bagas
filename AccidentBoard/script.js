@@ -6,6 +6,7 @@ class SafetyPerformanceBoard {
     run() {
         this.liveDateTime();
         this.addAccidentRecord();
+        this.updateAccidentStats();
     }
 
     liveDateTime() {
@@ -56,6 +57,28 @@ class SafetyPerformanceBoard {
                 }
             }
         });
+    }
+
+    updateAccidentStats() {
+        // get thisdate
+        const today = new Date().setHours(0, 0, 0, 0);
+        console.log(today);
+        // get records from localStorage
+        const accidentRecords = this.getAccidentRecords();
+        
+        // count alltime
+        let totalAllTime = 0;
+        // count today
+        let totalToday = 0;
+
+        // loop data records
+        accidentRecords.forEach(accident => {
+            
+        });
+
+        // print to innerHTML
+        document.getElementById("totalAccidentToday").innerHTML = totalToday;
+        document.getElementById("totalAccidentAllTime").innerHTML = totalAllTime;
     }
 
     getAccidentToday() {
