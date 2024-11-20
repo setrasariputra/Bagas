@@ -18,6 +18,12 @@ class SafetyPerformanceBoard {
         document.getElementById("currentTime").innerHTML = now.toLocaleTimeString().replace(/\./g, ":");
     }
 
+    getAccidentRecords() {
+        let accidents = JSON.parse(localStorage.getItem("accidents")) || [];
+
+        return accidents;
+    }
+
     addAccidentRecord() {
         document.getElementById("accidentForm").addEventListener("submit", (e) => {
             e.preventDefault();
@@ -35,7 +41,18 @@ class SafetyPerformanceBoard {
                 if(selectedDate > today) {
                     alert("Tidak dapat menambahkan data kecelakaan untuk tanggal dimasa depan.")
                 }else{
-                    console.log("simpan data");
+                    // get data records existing
+                    let accidentRecords = this.getAccidentRecords();
+                    accidentRecords.push(
+                        {
+                            "date": accidentDate,
+                            "count": accidentCount 
+                        }
+                    );
+                    // save data to localstorage
+                    localStorage.setItem("accidents", JSON.stringify(accidentRecords));
+                    // show success info
+                    alert("Data kecelakaan berhasil ditambahkan!");
                 }
             }
         });
