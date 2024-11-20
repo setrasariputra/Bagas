@@ -52,6 +52,8 @@ class SafetyPerformanceBoard {
                     );
                     // save data to localstorage
                     localStorage.setItem("accidents", JSON.stringify(accidentRecords));
+                    // update accidentStats
+                    this.updateAccidentStats();
                     // show success info
                     alert("Data kecelakaan berhasil ditambahkan!");
                 }
@@ -73,7 +75,14 @@ class SafetyPerformanceBoard {
 
         // loop data records
         accidentRecords.forEach(accident => {
-            
+            // count alltime
+            totalAllTime += accident.count;
+
+            // count today
+            let accidentDate = new Date(accident.date).setHours(0, 0, 0, 0);
+            if(today === accidentDate) {
+                totalToday += accident.count;
+            }
         });
 
         // print to innerHTML
