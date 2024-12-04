@@ -5,6 +5,8 @@
 }
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('bg-01.jpg');
+    background-size: cover;
     /* background: linear-gradient(to bottom right, #5e35b0, #369ed9);
     min-height: 100vh; */
 }
