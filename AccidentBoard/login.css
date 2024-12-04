@@ -7,7 +7,6 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-image: url('bg-01.jpg');
     background-size: cover;
-    /* background: linear-gradient(to bottom right, #5e35b0, #369ed9);*/
     min-height: 100vh;
 }
 .container {
@@ -17,4 +16,24 @@ body {
     margin-top: 50px;
     padding: 40px;
     border-radius: 20px;
+}
+h1 {
+    text-align: center;
+    font-size: 40px;
+    color: #333333;
+    margin-bottom: 50px;
+}
+.form-input {
+    margin-bottom: 20px;
+}
+.form-input label {
+    display: block;
+    margin-bottom: 10px;
+}
+.form-input input {
+    width: 100%;
+    padding: 10px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
 }
