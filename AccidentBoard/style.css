@@ -153,6 +153,28 @@ button.btn-biru:active {
 .radius-5 {
     border-radius: 5px;
 }
+.topmenu {
+    
+}
+.topmenu ul {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    text-align: right;
+}
+.topmenu ul li {
+    display: inline-block;
+}
+.topmenu ul li a {
+    display: block;
+    text-decoration: none;
+    color: #5e35b0;
+    font-weight: bold;
+    padding: 10px 20px 10px 20px;
+}
+.topmenu ul li a:hover {
+    color: #369ed9;
+}
 
 
 /* Responsive Design */
