@@ -6,6 +6,8 @@ class auth {
     init() {
         //this.testAlert();
         this.authValidation();
+        this.sessionValidation();
+        this.timestamp();
         this.logout();
     }
 
@@ -25,16 +27,29 @@ class auth {
     }
 
     sessionValidation() {
+        const activeSession = localStorage.getItem('session');
 
+        // set looping per 1 minute
+        setInterval(() => {
+            const timestamp = Date.now();
+            if(timestamp >= activeSession) {
+                // redirect to login page
+                this.redirectToLogin();
+            } 
+        }, 60 * 1000);
+    }
+
+    timestamp() {
+        // set looping per 1 second
+        setInterval(() => {
+            const timestamp = Date.now();
+            localStorage.setItem('timestamp', timestamp);
+        }, 1000);
     }
 
     logout() {
         document.getElementById("auth-logout").addEventListener("click", (e) => {
             e.preventDefault();
-
-            // clear auth session
-            localStorage.setItem('auth', '');
-            localStorage.setItem('session', '');
 
             // redirect to login page
             this.redirectToLogin();
@@ -42,27 +57,14 @@ class auth {
     }
 
     redirectToLogin() {
+        // clear auth session
+        localStorage.setItem('auth', '');
+        localStorage.setItem('session', '');
+        localStorage.setItem('timestamp', '');
+
         const loginUrl = 'http://127.0.0.1:5500/AccidentBoard/login.html';
         window.location.href = loginUrl;
     }
 }
 
 new auth();
-
-
-/*
-// validasi auth
-const auth = localStorage.getItem("auth");
-const authNumber = Number(auth);
-
-// auth validation
-if(authNumber === 1) {
-    // session validation
-
-
-}else{
-    // redirect to login page
-    const loginUrl = 'http://127.0.0.1:5500/AccidentBoard/login.html';
-    window.location.href = loginUrl;
-}
-*/
