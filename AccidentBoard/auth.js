@@ -5,6 +5,7 @@ class auth {
 
     init() {
         //this.testAlert();
+        this.authValidation();
         this.logout();
     }
 
@@ -13,7 +14,14 @@ class auth {
     }
 
     authValidation() {
+        // get auth value
+        const auth = localStorage.getItem("auth");
+        const authNumber = Number(auth);
 
+        if(!auth || authNumber !== 1) {
+            // redirect to login page
+            this.redirectToLogin();
+        }
     }
 
     sessionValidation() {
@@ -24,7 +32,12 @@ class auth {
         document.getElementById("auth-logout").addEventListener("click", (e) => {
             e.preventDefault();
 
-            alert('click logout');
+            // clear auth session
+            localStorage.setItem('auth', '');
+            localStorage.setItem('session', '');
+
+            // redirect to login page
+            this.redirectToLogin();
         });
     }
 
