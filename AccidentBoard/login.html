@@ -10,15 +10,17 @@
 <body>
     <div class="container">
         <h1>Login</h1>
-        <div class="form-input">
-            <label>Username</label>
-            <input type="text" name="username" />
-        </div>
-        <div class="form-input">
-            <label>Password</label>
-            <input type="password" name="password" />
-        </div>   
-        <button type="submit" id="login-submit" class="btn-login">LOGIN</button>     
+        <form method="post" id="login-form">
+            <div class="form-input">
+                <label>Username</label>
+                <input type="text" name="username" />
+            </div>
+            <div class="form-input">
+                <label>Password</label>
+                <input type="password" name="password" />
+            </div>   
+            <button type="submit" class="btn-login">LOGIN</button>   
+        </form>  
     </div>
     <script src="login.js"></script>
 </body>
