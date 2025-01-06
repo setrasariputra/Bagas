@@ -31,6 +31,8 @@ h1.title-board {
     margin-top: 50px;
     display: flex;
     gap: 10px; 
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .day-value {
     width: 70px;
@@ -41,4 +43,7 @@ h1.title-board {
     border: 1px solid gray;
     font-size: 20px;
     padding-top: 17px;
+}
+.bg-green {
+    background-color: chartreuse;
 }

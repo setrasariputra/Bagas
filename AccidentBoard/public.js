@@ -21,15 +21,28 @@ class publicBoard {
     }
     
     getCurrentTotalDayInMonth() {
+        const currentMonthIndex = new Date().getMonth();
+        const currentYear = new Date().getFullYear();
 
+        const totalDays = new Date(currentYear, currentMonthIndex + 1, 0).getDate();
+        
+        return totalDays;
     }
 
     displayDateCalendar() {
-        const totalDateInMonth = 31;
+        const totalDays = this.getCurrentTotalDayInMonth();
+        const totalDateInMonth = totalDays;
+        const currentDate = new Date().getDate();
+        
         let dateCircle = "";
         for(let i = 0; i < totalDateInMonth; i++) {
             const date = i + 1;
-            dateCircle += "<div class='day-value'>"+date+"</div>";    
+            // check condition
+            if(date <= currentDate) { // first condition
+                dateCircle += "<div class='day-value bg-green'>"+date+"</div>";
+            }else{
+                dateCircle += "<div class='day-value'>"+date+"</div>";
+            }
         }
 
         document.getElementById("displayDateCalendar").innerHTML=dateCircle;
