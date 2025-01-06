@@ -1,7 +1,6 @@
 class SafetyPerformanceBoard{
     constructor(){
         this.run();
-  
     }   
     run(){
         this.liveDateTime();
@@ -112,9 +111,6 @@ class SafetyPerformanceBoard{
         document.getElementById("totalAccidentThisWeek").innerHTML=totalAccidentThisWeek;
         document.getElementById("totalAccidentThisMonth").innerHTML=totalAccidentThisMonth;
 
-
-
-
     }
 
     getAccidentToday(){
@@ -124,6 +120,7 @@ class SafetyPerformanceBoard{
     getAccidentThisWeek(){
 
     }
+
 }
 
 new SafetyPerformanceBoard();
