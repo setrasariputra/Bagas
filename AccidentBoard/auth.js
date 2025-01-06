@@ -62,7 +62,7 @@ class auth {
         localStorage.setItem('session', '');
         localStorage.setItem('timestamp', '');
 
-        const loginUrl = 'http://127.0.0.1:5500/AccidentBoard/login.html';
+        const loginUrl = 'login.html';
         window.location.href = loginUrl;
     }
 }

@@ -18,7 +18,7 @@ document.getElementById("login-form").addEventListener("submit",(e)=>{
         // set session expired
         const now = new Date();
         const timestamp = Date.now();
-        const expiredDuration = 60 * 1000 // 60 second
+        const expiredDuration = (60 * 1000) * 1440 // 24 hours
         const expiredTimestamp = timestamp + expiredDuration;
         localStorage.setItem('session', expiredTimestamp);
 
