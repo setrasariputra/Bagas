@@ -47,3 +47,7 @@ h1.title-board {
 .bg-green {
     background-color: chartreuse;
 }
+.bg-red {
+    background-color: rgb(255, 81, 0);
+    color: white;
+}

@@ -23,7 +23,7 @@ document.getElementById("login-form").addEventListener("submit",(e)=>{
         localStorage.setItem('session', expiredTimestamp);
 
         // redirect ke dashboard
-        const dashbordUrl = 'http://127.0.0.1:5500/AccidentBoard/dashboard.html';
+        const dashbordUrl = 'dashboard.html';
         window.location.href = dashbordUrl;
     }
     else{
